@@ -24,11 +24,11 @@
            
            
            <label for="cpf">CPF:</label>
-           <input id="cpf" name="nome" type="number"/>
+           <input id="cpf" name="cpf" type="number"/>
 
 
-           <label for="data_nascimento">Data Nascimento</label> 
-           <input id="data_nascimento" name="nome" type="date"/>
+           <label for="data_nasc">Data Nascimento</label> 
+           <input id="data_nasc" name="data_nasc" type="date"/>
 
 
          <button type="submit">Salvar</button>

@@ -11,14 +11,16 @@ switch($url)
     break;    
 
     case '/pessoa':
-        PessoaConttoller::index();
+        PessoaController::index();
     break;
     
     case '/pessoa/form':
-        PessoaConttoller::form();
+        PessoaController::form();
     break;
     
-    
+    case '/pessoa/form/save':
+        PessoaController::save();
+        break;
 
    default:
    echo "erro 404 :(";
