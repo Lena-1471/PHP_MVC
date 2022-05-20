@@ -1,7 +1,27 @@
 <?php
 
-echo "página inicial - olá mundo";
+include 'Controller/PessoaController.php';
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-echo $url;
+switch($url)
+{
+    case '/':
+       echo "página inicial";
+    break;    
+
+    case '/pessoa':
+        PessoaConttoller::index();
+    break;
+    
+    case '/pessoa/form':
+        PessoaConttoller::form();
+    break;
+    
+    
+
+   default:
+   echo "erro 404 :(";
+   break;
+}
+
