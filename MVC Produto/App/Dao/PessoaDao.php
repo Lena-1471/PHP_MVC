@@ -3,17 +3,19 @@
 class PessoaDAO
 {
     private $conexao;
-
+//metodo construtor
     public function __construct()
     {
-        $dsn = "mysql:host=localhost:3306;dbname=db_mvc";
+         // Criando a conexão
+        $dsn = "mysql:host=localhost:3307;dbname=db_mvc";
 
         $this->conexao = new PDO($dsn, 'root', 'etecjau');
     }
 
+
     public function insert(PessoaModel $model)
     {
-
+        //trecho sql com ? para substituições posteriores
         $sql = "INSERT INTO pessoa(nome, cpf, data_nasc) VALUES (?, ?, ?)";
         
         $stmt = $this->conexao->prepare($sql);

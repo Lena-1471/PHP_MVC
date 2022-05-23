@@ -1,13 +1,14 @@
 <?php
 
 class PessoaController
-{
+{//método index para devolver uma view
     public static function index()
     {
         include 'View/modulos/Pessoa/ListaPessoa.php';
 
     }
     
+    //devolve um formulário para o usuário   
     public static function form()
     {
 
@@ -16,6 +17,8 @@ class PessoaController
 
     }
 
+
+    //preenche uma model para mandar pro banco de dados
     public static function save()
     {
       
