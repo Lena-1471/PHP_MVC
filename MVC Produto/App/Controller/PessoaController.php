@@ -4,6 +4,12 @@ class PessoaController
 {//método index para devolver uma view
     public static function index()
     {
+        include 'Model/PessoaModel.php';
+
+        $model = new PessoaModel();
+        $model->getAllRows();
+
+
         include 'View/modulos/Pessoa/ListaPessoa.php';
 
     }

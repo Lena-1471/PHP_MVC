@@ -1,6 +1,6 @@
 <?php
 
-class PessoaModel
+class ProdutoModel
 {
     public $id, $Produto, $Estoque, $Preco, $ID_categoria;
 
@@ -8,9 +8,9 @@ class PessoaModel
 
     public function save()
     {
-        include 'DAO/PessoaDAO.php';
+        include 'DAO/ProdutoDAO.php';
 
-        $dao = new PessoaDAO();
+        $dao = new ProdutoDAO();
 
         $dao->insert($this);
 
@@ -18,9 +18,9 @@ class PessoaModel
 
     public function getAllRows()
     {
-        include 'DAO/PessoaDAO.php';
+        include 'DAO/ProdutoDAO.php';
 
-        $dao = new PessoaDAO();
+        $dao = new ProdutoDAO();
 
         $this->rows = $dao->select();
 

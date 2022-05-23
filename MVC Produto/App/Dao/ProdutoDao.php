@@ -1,6 +1,6 @@
 <?php
 
-class PessoaDAO
+class ProdutoDAO
 {
     private $conexao;
 //metodo construtor
@@ -13,22 +13,24 @@ class PessoaDAO
     }
 
 
-    public function insert(PessoaModel $model)
+    public function insert(ProdutoModel $model)
     {
         //trecho sql com ? para substituições posteriores
-        $sql = "INSERT INTO pessoa(nome, cpf, data_nasc) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO Produto(Produto, Estoque, Preco, ID_categoria) VALUES (?, ?, ?, ?)";
         
         $stmt = $this->conexao->prepare($sql);
 
-        $stmt->bindValue(1, $model->nome);
-        $stmt->bindValue(2, $model->cpf);
-        $stmt->bindValue(3, $model->data_nasc);
+        $stmt->bindValue(1, $model->Produto);
+        $stmt->bindValue(2, $model->Estoque);
+        $stmt->bindValue(3, $model->Preco);
+        $stmt->bindValue(4, $model->ID_categoria);
+
 
         $stmt->execute();
 
     }
 
-    public function update(PessoaModel $model)
+    public function update(ProdutoModel $model)
     {
 
 
@@ -38,7 +40,7 @@ class PessoaDAO
 
     public function select()
     {
-        $sql = "SELECT * FROM pessoa";
+        $sql = "SELECT * FROM Produto";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
