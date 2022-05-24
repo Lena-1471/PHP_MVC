@@ -29,10 +29,10 @@
 
 
            <label for="Preco">Preco</label> 
-           <input id="Preco" name="Preco" type="date"/>
+           <input id="Preco" name="Preco" type="text"/>
 
            <label for="ID_categoria">ID_categoria</label> 
-           <input id="ID_categoria" name="ID_categoria" type="date"/>
+           <input id="ID_categoria" name="ID_categoria" type="number"/>
 
 
          <button type="submit">Salvar</button>

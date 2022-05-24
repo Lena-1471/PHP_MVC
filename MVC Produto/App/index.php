@@ -2,6 +2,7 @@
 
 include 'Controller/PessoaController.php';
 include 'Controller/ProdutoController.php';
+include 'Controller/CategoriaController.php';
 
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -24,16 +25,6 @@ switch($url)
         PessoaController::save();
         break;
 
-   default:
-   echo "erro 404 :(";
-   break;
-}
-
-switch($url)
-{
-    case '/':
-       echo "página inicial";
-    break;    
 
     case '/produto':
         ProdutoController::index();
@@ -47,7 +38,20 @@ switch($url)
         ProdutoController::save();
         break;
 
-   default:
-   echo "erro 404 :(";
-   break;
+
+   case '/categoria':
+    CategoriaController::index();
+break;
+
+case '/categoria/form':
+    CategoriaController::form();
+break;
+
+case '/categoria/form/save':
+    CategoriaController::save();
+    break;
+
+default:
+echo "erro 404 :(";
+break;
 }
