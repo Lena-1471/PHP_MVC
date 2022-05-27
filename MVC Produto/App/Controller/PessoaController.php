@@ -17,6 +17,9 @@ class PessoaController
     //devolve um formulário para o usuário   
     public static function form()
     {
+        include 'Model/PessoaModel.php';
+        $model = new PessoaModel();
+
 
         include 'View/modulos/Pessoa/FormPessoa.php';
 
