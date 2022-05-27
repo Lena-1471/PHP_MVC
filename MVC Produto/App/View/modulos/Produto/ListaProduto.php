@@ -24,7 +24,12 @@
 <?php foreach($model->rows as $item): ?>
 <tr>
     <td><?= $item->id ?></td>
-    <td><?= $item->Produto ?></td>
+    
+   
+    <td>
+       <a href="/produto/form?id=<?= $item->id ?>"><?= $item->Produto ?></a>
+    </td>
+
     <td><?= $item->Estoque ?></td>
     <td><?= $item->Preco ?></td>
     <td><?= $item->ID_categoria ?></td>

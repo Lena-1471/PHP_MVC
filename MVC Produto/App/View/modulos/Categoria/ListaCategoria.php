@@ -22,7 +22,10 @@
 <?php foreach($model->rows as $item): ?>
 <tr>
     <td><?= $item->id ?></td>
-    <td><?= $item->Categoria ?></td>
+    <td>
+    <td>
+       <a href="/categoria/form?id=<?= $item->id ?>"><?= $item->Categoria ?></a>
+    </td>
     <td><?= $item->Descricao ?></td>
 
 

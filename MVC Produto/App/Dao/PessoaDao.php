@@ -30,7 +30,17 @@ class PessoaDAO
 
     public function update(PessoaModel $model)
     {
+        $sql = "UPDATE pessoa SET nome=?, cpf=?, data_nasc=? WHERE id=?";
+       
+        $stmt = $this->conexao->prepare($sql);
 
+        $stmt->bindValue(1, $model->nome);
+        $stmt->bindValue(2, $model->cpf);
+        $stmt->bindValue(3, $model->data_nasc);
+        $stmt->bindValue(4, $model->id);
+
+
+        $stmt->execute();
 
 
     }
@@ -45,6 +55,21 @@ class PessoaDAO
 
 
         return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+    }
+
+    public function selectById(int $id)
+    {
+        include 'Model/PessoaModel.php';
+        
+        $sql = "SELECT * FROM pessoa WHERE id = ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+
+        return $stmt->fetchObject("PessoaModel");
+
 
     }
 

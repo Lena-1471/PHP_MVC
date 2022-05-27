@@ -7,8 +7,7 @@ Create table if not exists Pessoa(
 id int auto_increment not null primary key,
 Nome Varchar(50) not null,
 CPF Char(15) not null,
-Data_Nasc date not null,
-email varchar(100) not null
+data_nasc date not null
 );
 
 Create table if not exists Produto(

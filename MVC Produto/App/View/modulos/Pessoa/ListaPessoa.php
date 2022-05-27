@@ -22,7 +22,12 @@
 <?php foreach($model->rows as $item): ?>
 <tr>
     <td><?= $item->id ?></td>
-    <td><?= $item->Nome ?></td>
+
+    
+    <td>
+       <a href="/pessoa/form?id=<?= $item->id ?>"> <?= $item->Nome ?></a>
+    </td>
+
     <td><?= $item->CPF ?></td>
     <td><?= $item->data_nasc ?></td>
 

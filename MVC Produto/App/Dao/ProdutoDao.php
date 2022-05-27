@@ -33,7 +33,7 @@ class ProdutoDAO
     public function update(ProdutoModel $model)
     {
 
-        $sql = "UPDATE pessoa SET Produto=?, Estoque=?, Preco=?, ID_categoria=?) VALUES (?, ?, ?, ?)";
+        $sql = "UPDATE produto SET Produto=?, Estoque=?, Preco=?, ID_categoria=? WHERE id=? ";
        
         $stmt = $this->conexao->prepare($sql);
 
@@ -41,9 +41,40 @@ class ProdutoDAO
         $stmt->bindValue(2, $model->Estoque);
         $stmt->bindValue(3, $model->Preco);
         $stmt->bindValue(4, $model->ID_categoria);
+        $stmt->bindValue(5, $model->id);
         $stmt->execute();
 
     }
+
+
+    public function select()
+    {
+        $sql = "SELECT * FROM Produto";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+
+
+        return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+    }
+    
+    public function selectById(int $id)
+    {
+        include 'Model/ProdutoModel.php';
+        
+        $sql = "SELECT * FROM produto WHERE id = ?";
+
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(1, $id);
+        $stmt->execute();
+
+        return $stmt->fetchObject("ProdutoModel");
+
+
+    }
+
+   
 
     public function delete(int $id)
     {
@@ -58,18 +89,9 @@ class ProdutoDAO
 
     }
 
-    public function select()
-    {
-        $sql = "SELECT * FROM Produto";
+  
 
-        $stmt = $this->conexao->prepare($sql);
-        $stmt->execute();
-
-
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
-
-    }
-
+   
 
 
 
