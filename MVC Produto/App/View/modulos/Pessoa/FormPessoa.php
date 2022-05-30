@@ -21,15 +21,15 @@
        <form method="post" action="/pessoa/form/save">
 
            <label for="nome">Nome:</label>
-           <input id="nome" name="nome" type="text"/>
+           <input id="nome" name="nome" value="<?= $model->nome ?>" type="text"/>
            
            
            <label for="cpf">CPF:</label>
-           <input id="cpf" name="cpf" type="number"/>
+           <input id="cpf" name="cpf" value="<?= $model->cpf ?>" type="number"/>
 
 
            <label for="data_nasc">Data Nascimento</label> 
-           <input id="data_nasc" name="data_nasc" type="date"/>
+           <input id="data_nasc" name="data_nasc" value="<?= $model->data_nasc ?>" type="date"/>
 
 
          <button type="submit">Salvar</button>

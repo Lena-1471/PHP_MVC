@@ -20,6 +20,9 @@ class PessoaController
         include 'Model/PessoaModel.php';
         $model = new PessoaModel();
 
+        $model = $model->getById((int)$_GET['id']);
+
+        var_dump($model);
 
         include 'View/modulos/Pessoa/FormPessoa.php';
 

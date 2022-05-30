@@ -26,4 +26,14 @@ class ProdutoModel
 
 
     }
+
+    public function getById(int $id)
+    {
+
+        include 'DAO/ProdutoDAO.php';
+
+        $dao = new ProdutoDAO();
+
+        return $dao->selectById($id);
+    }
 }

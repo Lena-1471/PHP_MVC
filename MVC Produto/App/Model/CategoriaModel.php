@@ -26,4 +26,14 @@ class CategoriaModel
 
 
     }
+
+    public function getById(int $id)
+    {
+
+        include 'DAO/CategoriaDAO.php';
+
+        $dao = new CategoriaDAO();
+
+        return $dao->selectById($id);
+    }
 }

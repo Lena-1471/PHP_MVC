@@ -66,7 +66,7 @@ class CategoriaDAO
 
     public function selectById(int $id)
     {   //include para conseguir retorna um objeto da model
-        include 'Model/CategoriaModel.php';
+        include_once 'Model/CategoriaModel.php';
         
         $sql = "SELECT * FROM categoria WHERE id = ?";
 

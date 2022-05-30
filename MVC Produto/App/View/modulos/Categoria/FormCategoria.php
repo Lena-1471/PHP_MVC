@@ -21,11 +21,11 @@
        <form method="POST" action="/categoria/form/save">
 
            <label for="Categoria">Categoria:</label>
-           <input id="Categoria" name="Categoria" type="text"/>
+           <input id="Categoria" name="Categoria" value="<?= $model->Categoria ?>" type="text"/>
            
            
            <label for="Descricao">Descrição</label>
-           <input id="Descricao" name="Descricao" type="text"/>
+           <input id="Descricao" name="Descricao" value="<?= $model->Descricao ?>" type="text"/>
 
 
 

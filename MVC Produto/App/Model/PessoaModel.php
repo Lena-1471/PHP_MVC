@@ -20,10 +20,27 @@ class PessoaModel
     {
         include 'DAO/PessoaDAO.php';
 
+        //conexão via construtor
         $dao = new PessoaDAO();
 
+        
         $this->rows = $dao->select();
 
 
     }
+
+
+    public function getById(int $id)
+    {
+
+        include 'DAO/PessoaDAO.php';
+
+        $dao = new PessoaDAO();
+
+        return $dao->selectById($id);
+    }
+
+
+
+
 }
