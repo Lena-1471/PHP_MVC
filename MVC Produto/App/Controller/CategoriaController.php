@@ -17,6 +17,12 @@
     //devolve um formulário para o usuário   
     public static function form()
     {
+        include 'Model/CategoriaModel.php';
+        $model = new CategoriaModel();
+
+        if(isset($_GET['id']))
+        $model = $model->getById((int)$_GET['id']);
+
 
         include 'View/modulos/Categoria/FormCategoria.php';
 
@@ -32,6 +38,7 @@
 
        $model = new CategoriaModel();
        
+       $model->id = $_POST['id'];
        $model->Categoria = $_POST['Categoria'];
        $model->Descricao = $_POST['Descricao'];
 

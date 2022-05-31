@@ -14,11 +14,13 @@
 
 
 <body>
+
     <fieldset>
         <!--criando cadastro-->
         <legend>Cadastro Pessoa </legend>
 
        <form method="post" action="/pessoa/form/save">
+           <input type="hidden" value="<?=$model->id ?>" name="id" /> 
 
            <label for="nome">Nome:</label>
            <input id="nome" name="nome" value="<?= $model->nome ?>" type="text"/>
@@ -30,6 +32,7 @@
 
            <label for="data_nasc">Data Nascimento</label> 
            <input id="data_nasc" name="data_nasc" value="<?= $model->data_nasc ?>" type="date"/>
+
 
 
          <button type="submit">Salvar</button>

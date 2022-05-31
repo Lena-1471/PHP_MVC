@@ -25,10 +25,10 @@
 
     
     <td>
-       <a href="/pessoa/form?id=<?= $item->id ?>"> <?= $item->Nome ?></a>
+       <a href="/pessoa/form?id=<?= $item->id ?>"> <?= $item->nome ?></a>
     </td>
 
-    <td><?= $item->CPF ?></td>
+    <td><?= $item->cpf ?></td>
     <td><?= $item->data_nasc ?></td>
 
 

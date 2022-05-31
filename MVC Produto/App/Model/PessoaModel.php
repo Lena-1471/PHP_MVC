@@ -2,18 +2,26 @@
 
 class PessoaModel
 {
-    public $id, $Produto, $Estoque, $Preco, $ID_categoria;
+    public $id, $nome, $cpf, $data_nasc;
 
     public $rows;
 
     public function save()
     {
-        include 'DAO/PessoaDAO.php';
-
+        include 'DAO/PessoaDAO.php';//incluindo arquivos da dao
+//conexão no bd via construtor
         $dao = new PessoaDAO();
 
-        $dao->insert($this);
 
+        if(empty($model->id))
+        {
+            $dao->insert($this);
+        }else{
+
+            $dao->update($this);
+
+        }
+       
     }
 
     public function getAllRows()
@@ -33,14 +41,22 @@ class PessoaModel
     public function getById(int $id)
     {
 
-        include 'DAO/PessoaDAO.php';
+        include 'DAO/PessoaDAO.php';//incluindo arquivos da dao
 
         $dao = new PessoaDAO();
 
-        return $dao->selectById($id);
+        $obj =  $dao->selectById($id);
+
+        return ($obj) ? $obj : new PessoaModel;
+        /*if($obj)
+        {
+            return $obj;
+        }else{
+            return new PessoaModel();
+        }*/
     }
-
-
-
-
 }
+
+
+
+

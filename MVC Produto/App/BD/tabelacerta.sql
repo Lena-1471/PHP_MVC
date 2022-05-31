@@ -5,8 +5,8 @@ use db_mvc;
 
 Create table if not exists Pessoa(
 id int auto_increment not null primary key,
-Nome Varchar(50) not null,
-CPF Char(15) not null,
+nome Varchar(50) not null,
+cpf Char(15) not null,
 data_nasc date not null
 );
 

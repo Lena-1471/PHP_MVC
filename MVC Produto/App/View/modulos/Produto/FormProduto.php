@@ -19,6 +19,7 @@
        <legend>Cadastro Produto </legend>
 
        <form method="post" action="/produto/form/save">
+       <input type="hidden" value="<?=$model->id ?>" name="id" /> 
 
            <label for="Produto">Produto:</label>
            <input id="Produto" name="Produto" value="<?= $model->Produto ?>" type="text"/>

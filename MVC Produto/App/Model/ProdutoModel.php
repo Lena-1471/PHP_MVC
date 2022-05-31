@@ -31,9 +31,13 @@ class ProdutoModel
     {
 
         include 'DAO/ProdutoDAO.php';
-
         $dao = new ProdutoDAO();
 
-        return $dao->selectById($id);
+        $obj =  $dao->select();
+
+        return ($obj) ? $obj : new ProdutoModel;
+
+
+
     }
 }

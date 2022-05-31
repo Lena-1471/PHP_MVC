@@ -17,6 +17,12 @@ class ProdutoController
     //devolve um formulário para o usuário   
     public static function form()
     {
+                include 'Model/ProdutoModel.php';
+        $model = new ProdutoModel();
+
+        if(isset($_GET['id']))
+            $model = $model->getById((int)$_GET['id']);
+
 
         include 'View/modulos/Produto/FormProduto.php';
 
@@ -31,7 +37,8 @@ class ProdutoController
        include 'Model/ProdutoModel.php';
 
        $model = new ProdutoModel();
-       
+
+       $model->id = $_POST['id'];
        $model->Produto = $_POST['Produto'];
        $model->Estoque = $_POST['Estoque'];
        $model->Preco = $_POST['Preco'];

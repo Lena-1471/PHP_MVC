@@ -19,6 +19,7 @@
        <legend>Cadastro Categoria </legend>
 
        <form method="POST" action="/categoria/form/save">
+       <input type="hidden" value="<?=$model->id ?>" name="id" /> 
 
            <label for="Categoria">Categoria:</label>
            <input id="Categoria" name="Categoria" value="<?= $model->Categoria ?>" type="text"/>

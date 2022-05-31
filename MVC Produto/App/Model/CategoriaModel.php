@@ -34,6 +34,8 @@ class CategoriaModel
 
         $dao = new CategoriaDAO();
 
-        return $dao->selectById($id);
+        $obj =  $dao->select();
+
+        return ($obj) ? $obj : new CategoriaModel;
     }
 }
