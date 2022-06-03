@@ -12,6 +12,7 @@
 <table>
 
 <tr>
+    <th></th>
     <th>id</th>
     <th>Produto</th>
     <th>Estoque</th>
@@ -23,6 +24,10 @@
 
 <?php foreach($model->rows as $item): ?>
 <tr>
+<td>
+       <a href="/produto/delete?id=<?= $item->id ?>">x</a>
+    </td>
+
     <td><?= $item->id ?></td>
     
    
