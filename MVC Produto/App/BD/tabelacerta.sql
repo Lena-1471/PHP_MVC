@@ -1,4 +1,4 @@
-
+drop database if exists db_mvc;
 create database if not exists db_mvc;
 
 use db_mvc;
