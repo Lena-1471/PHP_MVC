@@ -28,7 +28,7 @@
        <a href="/categoria/delete?id=<?= $item->id ?>">x</a>
     </td>
     <td><?= $item->id ?></td>
-    <td>
+    
     <td>
        <a href="/categoria/form?id=<?= $item->id ?>"><?= $item->Categoria ?></a>
     </td>

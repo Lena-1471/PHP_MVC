@@ -50,7 +50,7 @@ class CategoriaModel
     }
     public function delete(int $id)
     {
-        include 'DAO/Categoria.php';
+        include 'DAO/CategoriaDAO.php';
 
         $dao = new CategoriaDAO();
 
