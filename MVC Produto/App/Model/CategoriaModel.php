@@ -2,18 +2,25 @@
 
 class CategoriaModel
 {
-    public $id, $Categoria, $Descrição;
+    public  $id, $Categoria, $Descricao;
 
     public $rows;
 
     public function save()
     {
         include 'DAO/CategoriaDAO.php';
-
         $dao = new CategoriaDAO();
 
-        $dao->insert($this);
 
+        if(empty($this->id))
+        {
+            $dao->insert($this);
+        }else{
+
+            $dao->update($this);
+
+        }
+       
     }
 
     public function getAllRows()
@@ -22,10 +29,12 @@ class CategoriaModel
 
         $dao = new CategoriaDAO();
 
+        
         $this->rows = $dao->select();
 
 
     }
+
 
     public function getById(int $id)
     {
@@ -34,8 +43,13 @@ class CategoriaModel
 
         $dao = new CategoriaDAO();
 
-        $obj =  $dao->select();
+        $obj =  $dao->selectById($id);
 
         return ($obj) ? $obj : new CategoriaModel;
+     
     }
 }
+
+
+
+

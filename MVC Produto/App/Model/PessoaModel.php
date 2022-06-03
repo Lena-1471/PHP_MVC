@@ -13,8 +13,9 @@ class PessoaModel
         $dao = new PessoaDAO();
 
 
-        if(empty($model->id))
-        {
+        if(empty($this->id))
+        {//chama o insert 
+            //recebe o  objeto da model já preenchido
             $dao->insert($this);
         }else{
 
