@@ -49,5 +49,19 @@
        header("Location: /categoria");
 
     }
+    public static function delete()
+    {
+        include 'Model/CategoriaModel.php';
+
+        $model = new CategoriaModel();
+
+        $model->delete((int)$_GET['id']);
+
+
+        header("Location: /categoria");
+
+
+        
+    }
 
 }

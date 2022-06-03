@@ -56,6 +56,16 @@ class PessoaModel
             return new PessoaModel();
         }*/
     }
+
+    public function delete(int $id)
+    {
+        include 'DAO/PessoaDAO.php';
+
+        $dao = new PessoaDAO();
+
+        $dao->delete($id);
+
+    }
 }
 
 

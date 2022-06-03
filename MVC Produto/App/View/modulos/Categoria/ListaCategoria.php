@@ -11,7 +11,7 @@
 
 <table>
 
-<tr> 
+<tr>
 
     <th></th>
     <th>id</th>
@@ -23,6 +23,10 @@
 
 <?php foreach($model->rows as $item): ?>
 <tr>
+
+    <td>
+       <a href="/categoria/delete?id=<?= $item->id ?>">x</a>
+    </td>
     <td><?= $item->id ?></td>
     <td>
     <td>
@@ -36,6 +40,14 @@
 
 </tr>
 <?php endforeach ?>
+
+<?php if(count($model->rows)==0): ?>
+    <tr>
+        <td colspan="5">Nenhum registro encontrado. </td>
+    </tr>
+    <?php endif ?>
+
+</table>
 
 </table>
 
