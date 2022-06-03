@@ -11,7 +11,9 @@
 
 <table>
 
-<tr>
+<tr> 
+
+    <th></th>
     <th>id</th>
     <th>Categoria</th>
     <th>Descricao</th>

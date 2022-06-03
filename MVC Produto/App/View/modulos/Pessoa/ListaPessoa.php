@@ -12,6 +12,8 @@
 <table>
 
 <tr>
+
+    <th></th>
     <th>id</th>
     <th>Nome</th>
     <th>CPF</th>
@@ -21,6 +23,13 @@
 
 <?php foreach($model->rows as $item): ?>
 <tr>
+
+    <td>
+       <a href="/pessoa/delete?id=<?= $item->id ?>">x</a>
+    </td>
+
+
+
     <td><?= $item->id ?></td>
 
     
