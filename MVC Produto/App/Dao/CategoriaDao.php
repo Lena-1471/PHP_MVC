@@ -1,5 +1,10 @@
 <?php
 
+
+namespace App\dao;
+use \PDO;
+use App\Model\CategoriaModel;
+
 class CategoriaDAO
 {
     private $conexao;

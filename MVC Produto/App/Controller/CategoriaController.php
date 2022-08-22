@@ -1,12 +1,18 @@
 <?php
 
+namespace App\Controller;
+use App\Model\CategoriaModel;
+
+
  class CategoriaController
 {//método index para devolver uma view
+
+    
     public static function index()
     {
         include 'Model/CategoriaModel.php';
 
-        $model = new CategoriaModel();
+        $modelo = new CategoriaModel();
         $model->getAllRows();
 
 

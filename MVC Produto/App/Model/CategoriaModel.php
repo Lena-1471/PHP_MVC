@@ -1,7 +1,14 @@
 <?php
 
+namespace App\Model;
+use App\dao\CategoriaDAO;
+
+
+
 class CategoriaModel
 {
+
+    
     public  $id, $Categoria, $Descricao;
 
     public $rows;
@@ -57,8 +64,8 @@ class CategoriaModel
         $dao->delete($id);
 
     }
-}
 
+}
 
 
 

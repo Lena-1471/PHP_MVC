@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+use App\dao\PessoaDAO;
+
 class PessoaModel
 {
     public $id, $nome, $cpf, $data_nasc;
