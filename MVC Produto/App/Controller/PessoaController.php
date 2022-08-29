@@ -13,7 +13,7 @@ class PessoaController
         $model->getAllRows();
 
 
-        include 'View/modulos/Pessoa/ListaPessoa.php';
+        include VIEWS . 'Pessoa/ListaPessoa.php';
 
     }
     
@@ -28,7 +28,7 @@ class PessoaController
 
       // var_dump($model);
 
-        include 'View/modulos/Pessoa/FormPessoa.php';
+        include VIEWS . 'Pessoa/FormPessoa.php';
 
 
     }

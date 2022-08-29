@@ -13,7 +13,7 @@ class ProdutoController
         $model->getAllRows();
 
 
-        include 'View/modulos/Produto/ListaProduto.php';
+        include VIEWS . 'Produto/ListaProduto.php';
 
     }
     
@@ -27,7 +27,7 @@ class ProdutoController
             $model = $model->getById((int)$_GET['id']);
 
 
-        include 'View/modulos/Produto/FormProduto.php';
+        include VIEWS . 'Produto/FormProduto.php';
 
 
     }

@@ -16,7 +16,7 @@ use App\Model\CategoriaModel;
         $model->getAllRows();
 
 
-        include 'View/modulos/Categoria/ListaCategoria.php';
+        include VIEWS . 'Categoria/ListaCategoria.php';
 
     }
     
@@ -30,7 +30,7 @@ use App\Model\CategoriaModel;
         $model = $model->getById((int)$_GET['id']);
 
 
-        include 'View/modulos/Categoria/FormCategoria.php';
+        include VIEWS . 'Categoria/FormCategoria.php';
 
 
     }

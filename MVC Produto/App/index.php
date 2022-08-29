@@ -1,6 +1,8 @@
 <?php
 
-include 'Controller/autoLoad.php';
+include 'config.php';
+include 'autoLoad.php';
+
 use App\Controller\CategoriaController;
 use App\Controller\PessoaController;
 use App\Controller\ProdutoController;
