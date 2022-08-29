@@ -1,8 +1,9 @@
 <?php
 
-include 'Controller/PessoaController.php';
-include 'Controller/ProdutoController.php';
-include 'Controller/CategoriaController.php';
+include 'Controller/autoLoad.php';
+use App\Controller\CategoriaController;
+use App\Controller\PessoaController;
+use App\Controller\ProdutoController;
 
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
