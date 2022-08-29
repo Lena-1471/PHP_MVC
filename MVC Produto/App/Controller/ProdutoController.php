@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controller;
+use App\Model\ProdutoModel;
+
 class ProdutoController
 {//método index para devolver uma view
     public static function index()

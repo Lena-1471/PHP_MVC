@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model;
+use App\dao\ProdutoDAO;
+
 class ProdutoModel
 {
     public $id, $Produto, $Estoque, $Preco, $ID_categoria;

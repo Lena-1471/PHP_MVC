@@ -1,5 +1,9 @@
 <?php
 
+namespace App\dao;
+use \PDO;
+use App\Model\ProdutoModel;
+
 class ProdutoDAO
 {
     private $conexao;
