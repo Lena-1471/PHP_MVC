@@ -7,8 +7,7 @@ class PessoaController
 {//método index para devolver uma view
     public static function index()
     {
-        include 'Model/PessoaModel.php';
-
+        
         $model = new PessoaModel();
         $model->getAllRows();
 
@@ -20,7 +19,7 @@ class PessoaController
     //devolve um formulário para o usuário   
     public static function form()
     {
-        include 'Model/PessoaModel.php';
+
         $model = new PessoaModel();
 
         if(isset($_GET['id']))
@@ -37,9 +36,7 @@ class PessoaController
     //preenche uma model para mandar pro banco de dados
     public static function save()
     {
-      
-       include 'Model/PessoaModel.php';
-       
+             
        //instancia da model
        $model = new PessoaModel();
        
@@ -57,7 +54,6 @@ class PessoaController
 
     public static function delete()
     {
-        include 'Model/PessoaModel.php';
 
         $model = new PessoaModel();
 

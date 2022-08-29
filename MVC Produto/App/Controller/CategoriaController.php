@@ -10,9 +10,7 @@ use App\Model\CategoriaModel;
     
     public static function index()
     {
-        include 'Model/CategoriaModel.php';
-
-        $modelo = new CategoriaModel();
+        $model = new CategoriaModel();
         $model->getAllRows();
 
 
@@ -23,7 +21,7 @@ use App\Model\CategoriaModel;
     //devolve um formulário para o usuário   
     public static function form()
     {
-        include 'Model/CategoriaModel.php';
+        
         $model = new CategoriaModel();
 
         if(isset($_GET['id']))
@@ -38,10 +36,8 @@ use App\Model\CategoriaModel;
 
     //preenche uma model para mandar pro banco de dados
     public static function save()
-    {
-      
-       include 'Model/CategoriaModel.php';
-
+    {    
+        
        $model = new CategoriaModel();
        
        $model->id = $_POST['id'];
@@ -57,7 +53,6 @@ use App\Model\CategoriaModel;
     }
     public static function delete()
     {
-        include 'Model/CategoriaModel.php';
 
         $model = new CategoriaModel();
 
@@ -65,9 +60,7 @@ use App\Model\CategoriaModel;
 
 
         header("Location: /categoria");
-
-
-        
+           
     }
 
 }

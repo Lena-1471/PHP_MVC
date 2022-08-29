@@ -11,7 +11,7 @@ class ProdutoModel
 
     public function save()
     {
-        include 'DAO/ProdutoDAO.php';
+
         $dao = new ProdutoDAO();
 
 
@@ -28,7 +28,6 @@ class ProdutoModel
 
     public function getAllRows()
     {
-        include 'DAO/ProdutoDAO.php';
 
         //conexão via construtor
         $dao = new ProdutoDAO();
@@ -43,8 +42,6 @@ class ProdutoModel
     public function getById(int $id)
     {
 
-        include 'DAO/ProdutoDAO.php';
-
         $dao = new ProdutoDAO();
 
         $obj =  $dao->selectById($id);
@@ -54,7 +51,6 @@ class ProdutoModel
     }
     public function delete(int $id)
     {
-        include 'DAO/ProdutoDAO.php';
 
         $dao = new ProdutoDAO();
 

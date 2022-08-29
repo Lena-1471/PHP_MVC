@@ -7,8 +7,7 @@ class ProdutoController
 {//método index para devolver uma view
     public static function index()
     {
-        include 'Model/ProdutoModel.php';
-
+        
         $model = new ProdutoModel();
         $model->getAllRows();
 
@@ -20,7 +19,7 @@ class ProdutoController
     //devolve um formulário para o usuário   
     public static function form()
     {
-                include 'Model/ProdutoModel.php';
+
         $model = new ProdutoModel();
 
         if(isset($_GET['id']))
@@ -37,8 +36,6 @@ class ProdutoController
     public static function save()
     {
       
-       include 'Model/ProdutoModel.php';
-
        $model = new ProdutoModel();
 
        $model->id = $_POST['id'];
@@ -56,7 +53,6 @@ class ProdutoController
     }
     public static function delete()
     {
-        include 'Model/ProdutoModel.php';
 
         $model = new ProdutoModel();
 
