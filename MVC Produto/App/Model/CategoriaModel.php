@@ -5,13 +5,13 @@ use App\dao\CategoriaDAO;
 
 
 
-class CategoriaModel
+class CategoriaModel extends Model
 {
 
     
     public  $id, $Categoria, $Descricao;
 
-    public $rows;
+
 
     public function save()
     {
