@@ -3,7 +3,7 @@
 namespace App\Controller;
 use App\Model\PessoaModel;
 
-class PessoaController
+class PessoaController extends Controller
 {//método index para devolver uma view
     public static function index()
     {
@@ -12,7 +12,7 @@ class PessoaController
         $model->getAllRows();
 
 
-        include VIEWS . 'Pessoa/ListaPessoa.php';
+        parent::render ('Pessoa/Lista', $model);
 
     }
     
@@ -27,7 +27,7 @@ class PessoaController
 
       // var_dump($model);
 
-        include VIEWS . 'Pessoa/FormPessoa.php';
+      parent::render ('Pessoa/Lista', $model);
 
 
     }

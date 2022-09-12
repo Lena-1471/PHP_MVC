@@ -3,7 +3,7 @@
 namespace App\Controller;
 use App\Model\ProdutoModel;
 
-class ProdutoController
+class ProdutoController extends Controller
 {//método index para devolver uma view
     public static function index()
     {
@@ -12,8 +12,7 @@ class ProdutoController
         $model->getAllRows();
 
 
-        include VIEWS . 'Produto/ListaProduto.php';
-
+        parent::render ('Produto/Lista', $model);
     }
     
     //devolve um formulário para o usuário   
@@ -26,8 +25,7 @@ class ProdutoController
             $model = $model->getById((int)$_GET['id']);
 
 
-        include VIEWS . 'Produto/FormProduto.php';
-
+            parent::render ('Produto/Lista', $model);
 
     }
 

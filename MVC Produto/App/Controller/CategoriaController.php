@@ -4,7 +4,7 @@ namespace App\Controller;
 use App\Model\CategoriaModel;
 
 
- class CategoriaController
+ class CategoriaController extends Controller
 {//método index para devolver uma view
 
     
@@ -14,7 +14,7 @@ use App\Model\CategoriaModel;
         $model->getAllRows();
 
 
-        include VIEWS . 'Categoria/ListaCategoria.php';
+        parent::render ('Categoria/Lista', $model);
 
     }
     
@@ -28,8 +28,7 @@ use App\Model\CategoriaModel;
         $model = $model->getById((int)$_GET['id']);
 
 
-        include VIEWS . 'Categoria/FormCategoria.php';
-
+        parent::render ('Categoria/Lista', $model);
 
     }
 
