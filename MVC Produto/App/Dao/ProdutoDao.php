@@ -4,16 +4,12 @@ namespace App\dao;
 use \PDO;
 use App\Model\ProdutoModel;
 
-class ProdutoDAO
+class ProdutoDAO extends DAO
 {
-    private $conexao;
-//metodo construtor
+   
     public function __construct()
     {
-         // Criando a conexão
-        $dsn = "mysql:host=localhost:3307;dbname=db_mvc";
-
-        $this->conexao = new PDO($dsn, 'root', 'etecjau');
+        parent::__construct();
     }
 
 
