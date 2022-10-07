@@ -1,5 +1,5 @@
 <?php
-
+// eu te amo
 spl_autoload_register(function($ClasseChamada){
 
     $classe_controller = 'Controller/' . $ClasseChamada . '.php';
